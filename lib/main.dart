@@ -1,6 +1,6 @@
 // Widgetbook file: widgetbook.dart
 import 'package:flutter/material.dart';
-import 'package:sunrise_ui/src/components/srtextfield/main.dart';
+import 'package:sunrise_ui/sunrise_ui.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 void main() {
@@ -16,8 +16,7 @@ class HotReload extends StatelessWidget {
       addons: const [],
       directories: [
         WidgetbookComponent(name: 'Components', useCases: [
-          WidgetbookUseCase.child(
-              name: 'SRTextField', child: const SRTextField())
+          WidgetbookUseCase.child(name: 'SRTextField', child: const SRField())
         ])
       ],
     );
