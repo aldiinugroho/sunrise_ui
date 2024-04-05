@@ -1,12 +1,17 @@
 name: sunrise_ui
 description: "A sunrise_ui package project."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/aldiinugroho/sunrise_ui
 repository: https://github.com/aldiinugroho/sunrise_ui
 
 environment:
-  sdk: ^1.20.0
-  flutter: ">=1.17.0"
+  sdk: '>=2.17.0 <4.0.0'
+  flutter: ">=1.20.0"
+
+  # This package supports all platforms listed below.
+platforms:
+  android:
+  ios:
 
 dependencies:
   flutter:
