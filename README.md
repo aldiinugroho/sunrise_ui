@@ -11,29 +11,14 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Sunrise_UI is a lightweight library designed to streamline the development process for simple user interface components. With a focus on simplicity and efficiency, Sunrise_UI offers a comprehensive collection of easy-to-use components for creating clean and intuitive interfaces. Whether you're building a web or mobile application, Sunrise_UI empowers developers to quickly integrate essential UI elements such as buttons, input fields, and navigation bars with minimal hassle. Harness the power of Sunrise_UI to elevate your project's user experience and accelerate your development workflow.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Here are some features offered by the Sunrise_UI library:
 
-## Getting started
+TextField Calendar: Easily integrate an interactive calendar into your forms. Users can quickly and easily select dates using a responsive calendar widget.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+TextField Selector: With this component, you can add a selection box that allows users to choose options from a predefined list. It makes it easy for users to select from various options quickly.
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+And many more to come: We're continually expanding this library by adding various new components that enable you to create richer and more dynamic user interfaces. Stay tuned for exciting updates on new features!
