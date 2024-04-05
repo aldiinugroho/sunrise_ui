@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sunrise_ui/src/components/srcalendar/main.dart';
+import 'package:sunrise_ui/src/components/srcalendarrange/main.dart';
+import 'package:sunrise_ui/src/components/srfield/enumsrfield.dart';
 import 'package:sunrise_ui/src/constants/srcolor/main.dart';
 import 'package:sunrise_ui/src/constants/srfont/main.dart';
 
@@ -13,7 +15,7 @@ class SRField extends StatefulWidget {
   final Color? srBaseColor;
   final Color? srBaseLabelColor;
   final int? srMaxLength;
-  final bool? srCalendar;
+  final EnumSRField? srFieldType;
   final Function(DateTime value)? srCallbackCalendar;
   final String? srValue;
   const SRField(
@@ -27,7 +29,7 @@ class SRField extends StatefulWidget {
       this.srBaseColor = Colors.white,
       this.srBaseLabelColor = Colors.white,
       this.srMaxLength,
-      this.srCalendar = false,
+      this.srFieldType = EnumSRField.base,
       this.srCallbackCalendar,
       this.srValue});
 
@@ -75,7 +77,7 @@ class _SRFieldState extends State<SRField> {
     return TextFormField(
       controller: textEditingController,
       onTap: () => {
-        if (widget.srCalendar == true)
+        if (widget.srFieldType == EnumSRField.calendar)
           {
             SRCalendar(
               context: context,
@@ -84,8 +86,13 @@ class _SRFieldState extends State<SRField> {
               onComplete: () => focusNode.unfocus(),
             )
           }
+        else if (widget.srFieldType == EnumSRField.calendarrange)
+          {SRCalendarRange(context: context)}
       },
-      readOnly: widget.srCalendar ?? false,
+      readOnly: widget.srFieldType == EnumSRField.calendar ||
+              widget.srFieldType == EnumSRField.calendarrange
+          ? true
+          : false,
       maxLength: widget.srMaxLength,
       focusNode: focusNode,
       onChanged: (value) {
