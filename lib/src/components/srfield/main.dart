@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sunrise_ui/src/components/srcalendar/main.dart';
 import 'package:sunrise_ui/src/constants/srcolor/main.dart';
 import 'package:sunrise_ui/src/constants/srfont/main.dart';
 
@@ -74,13 +75,15 @@ class _SRFieldState extends State<SRField> {
     return TextFormField(
       controller: textEditingController,
       onTap: () => {
-        // if (widget.srCalendar == true)
-        //   {
-        //     CFormCalendar(
-        //         context: context,
-        //         onCallBack: (newDateTime) =>
-        //             widget.ipCallbackCalendar?.call(newDateTime))
-        //   }
+        if (widget.srCalendar == true)
+          {
+            SRCalendar(
+              context: context,
+              onCallBack: (newDateTime) =>
+                  widget.srCallbackCalendar?.call(newDateTime),
+              onComplete: () => focusNode.unfocus(),
+            )
+          }
       },
       readOnly: widget.srCalendar ?? false,
       maxLength: widget.srMaxLength,

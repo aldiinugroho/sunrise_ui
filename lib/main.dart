@@ -16,7 +16,13 @@ class HotReload extends StatelessWidget {
       addons: const [],
       directories: [
         WidgetbookComponent(name: 'Components', useCases: [
-          WidgetbookUseCase.child(name: 'SRTextField', child: const SRField())
+          WidgetbookUseCase.child(name: 'SRField Text', child: const SRField()),
+          WidgetbookUseCase.child(
+              name: 'SRField Calendar',
+              child: const SRField(
+                srHint: 'Tanggal Lahir',
+                srCalendar: true,
+              ))
         ])
       ],
     );
