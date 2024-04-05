@@ -13,7 +13,9 @@ class _SRTextFieldState extends State<SRTextField> {
     return Container(
       color: Colors.amber,
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.width * 0.3,
+      child: TextFormField(
+        decoration: const InputDecoration(hintText: 'Placeholder'),
+      ),
     );
   }
 }
