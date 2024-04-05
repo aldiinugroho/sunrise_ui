@@ -1,10 +1,11 @@
 name: sunrise_ui
 description: "A sunrise_ui package project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/aldiinugroho/sunrise_ui
+repository: https://github.com/aldiinugroho/sunrise_ui
 
 environment:
-  sdk: '>=3.3.1 <4.0.0'
+  sdk: ^1.20.0
   flutter: ">=1.17.0"
 
 dependencies:
